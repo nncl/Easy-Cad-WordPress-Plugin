@@ -8,8 +8,12 @@
     Author URI: http://www.cauealmeida.com
     */
 
-    function easy_admin_actions {
-    	add_options_page("Easy Cad Product Display", "Easy Cad Product Display", 1, "Easy Cad Product Display", "easy_admin")
+    function easy_admin() {
+        include('easy_import_admin.php');
+    }
+
+    function easy_admin_actions() {
+    	add_options_page("easy-painel", "Easy Cad Painel", 1, "easy-painel", "easy_admin");
     }
 
     add_action('admin_menu', 'easy_admin_actions');
